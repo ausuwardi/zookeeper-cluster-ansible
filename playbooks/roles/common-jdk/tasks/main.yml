@@ -1,8 +1,6 @@
 ---
 
 - name: Installing Java Packages | OpenJDK 1.8.0
-  yum:
-    name: "{{ item }}"
+  apt:
+    name: [ "openjdk-8-jdk-headless" ]
     state: present
-  with_items:
-    - java-1.8.0-openjdk
